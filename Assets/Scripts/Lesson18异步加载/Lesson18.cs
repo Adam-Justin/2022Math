@@ -24,7 +24,7 @@ public class Lesson18 : MonoBehaviour
         // 异步加载--会消耗帧, 所以有很多资源的时候需要写一个加载的进度条
         ResourceRequest re = Resources.LoadAsync<Texture>("Pictures/Picture");
         // 是否加载结束
-        re.completed += Re_completed;
+        re.completed += ResourceCompleted;
         // 打印帧数
         Debug.Log(Time.frameCount);
 
@@ -34,7 +34,7 @@ public class Lesson18 : MonoBehaviour
     /// 加载完毕回调函数
     /// </summary>
     /// <param name="obj">得到的资源类</param>
-    private void Re_completed(AsyncOperation obj)
+    private void ResourceCompleted(AsyncOperation obj)
     {
         Debug.Log("资源加载完毕");
         // 打印帧数
@@ -64,7 +64,7 @@ public class Lesson18 : MonoBehaviour
         // 加载完毕继续执行, 为什么yield return re呢? 因为ResourceRequest继承了AsyncOperation
         // 而AsyncOperation 继承了 YieldInstruction 且协程Coroutine中也是继承了 YieldInstruction
         // 所以大家继承了同一个类 当你使用 yield return re; 时，
-        // 你实际上是在告诉协程：“在这里暂停执行，直到 re 这个异步操作完成。”
+        // 你实际上是在告诉协程：“在这里暂停执行，直到 rq 这个异步操作完成。”
         // 这意味着协程会在这里等待，直到资源加载完成。
         // 一旦资源加载完成，协程就会从 yield return 语句的下一条语句继续执行。
 

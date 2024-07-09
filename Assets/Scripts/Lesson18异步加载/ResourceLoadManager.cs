@@ -34,7 +34,7 @@ public class ResourceLoadManager : MonoBehaviour
             // 调用外部的回调函数 -- 转换资源
             callBack((a as ResourceRequest).asset as T);
             // 将加载好的资源通过外部回调函数返回
-            Debug.Log("资源转换成功,并已返回给对象");
+            // Debug.Log("资源转换成功,并已返回给对象");
         };
     }
 

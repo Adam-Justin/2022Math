@@ -15,7 +15,7 @@ public class Lesson18Exercise : MonoBehaviour
                 });*/
 
         // 普通单例异步加载 -- 加载图片资源
-        // ResourceLoadManager.Instance.LoadResourceAsynchionzed<Texture>("Pictures/Picture", OnpictureLoaded);
+        ResourceLoadManager.Instance.LoadResourceAsynchionzed<Texture>("Pictures/Picture", OnpictureLoaded);
         // 协程单例异步加载-- 加载图片资源
         ResourceLoadManager.Instance.LoadResourceAsynchionzedCoroutine<Texture>("Pictures/Picture", OnpictureLoaded);
     }

@@ -4,5 +4,11 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: "Assets/Scripts/Lesson20\u5F02\u6B65\u52A0\u8F7D\u573A\u666F/Lesson20\u5F02\u6B65\u52A0\u8F7D\u573A\u666F.unity"
+    guid: b3762f1368083994485e0151553ca93d
+  - enabled: 1
+    path: "Assets/Scripts/Lesson20\u5F02\u6B65\u52A0\u8F7D\u573A\u666F/\u6D4B\u8BD5\u573A\u666F.unity"
+    guid: 34d26276a531a714d98ef94ae6be2148
   m_configObjects: {}
